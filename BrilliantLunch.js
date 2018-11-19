@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 var validator = require('express-validator');
 const express = require('express');
 const app = express();
-
+//using clustering to scale performance 
 if (cluster.isMaster) {
     console.log(`Master ${process.pid} is running`);
 
