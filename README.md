@@ -11,6 +11,6 @@ the approach to solve is
    if candidate  lunch event start time is greater than niki end time or niki start time is after candidate end time overlap is 0 
    if candidate lunch event start is less than niki then start time is niki's time 
    if candidate lunch event end is after niki than end time is niki's time 
-      else both start and end time of user is used and duration calculated 
+   else both start and end time of user is used and duration calculated 
 3)check against best event if this event is better this becomes the best event 
 4) check for best event  is to check duration if duration is same then check is for which is starting earlier 

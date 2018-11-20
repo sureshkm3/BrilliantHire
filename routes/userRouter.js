@@ -124,8 +124,9 @@ var routes = function (logger) {
 
         userRouter.route("/getBrilliantLunch").post(function (req, res) {
                 var jsondata = req.body;
-                if (!Array.isArray(jsondata)){
-                        res.status(400).send(JSON.stringify("invalid json array"));
+                if (!Array.isArray(jsondata)) {
+                        return res.status(400).send(JSON.stringify("invalid json array"));
+
                 }
                 var ret = FindLunchEvent(jsondata);
                 return res.status(200).send(JSON.stringify(ret));
@@ -251,7 +252,7 @@ function FormatResult(Result, IsPresent) {
                 FormattedResult.BrilliantLunch.Time.End = Result.End;
         } else {
                 FormattedResult.BrilliantLunch.Matched = IsPresent;
-                FormattedResult.BrilliantLunch.Time = {};
+                FormattedResult.BrilliantLunch.Time = null;
         }
         return FormattedResult;
 }
